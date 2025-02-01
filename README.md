@@ -31,88 +31,92 @@ npm start
 The server will start, and the Mongoose models will be synced to the MongoDB database.
 
 ## API Routes
-```
-/api/users
-```
--GET all users: Returns all users with their thoughts and friends.
 
--GET a single user by its _id: Retrieves a specific user with populated thoughts and friend data.
+🚀 1. Add a New Request in Insomnia
 
--POST to create a new user:
-```
-{
-    "username": "lernantino",
-    "email": "lernantino@gmail.com"
-}
-```
--PUT to update a user by its _id: Modify user details.
+-Open Insomnia.
 
--DELETE to remove a user by its _id: Delete the user and optionally remove associated thoughts.
+-Click "New Request" → Name it (e.g., "Create User") → Select POST → Click Create.
 
-```
-/api/users/:userId/friends/:friendId
-```
--POST to add a friend to a user's friend list.
+👤 2. Create a New User (POST /api/users)
 
--DELETE to remove a friend from a user's friend list.
-```
-/api/thoughts
-```
--GET all thoughts: Returns all thoughts.
+# Method: POST
 
--GET a single thought by its _id: Retrieves a specific thought.
-
--POST to create a new thought:
-
+URL: http://localhost:3001/api/users
+Body (JSON):
 ```
 {
-    "thoughtText": "Here's a cool thought...",
-    "username": "lernantino",
-    "userId": "5edff358a0fcb779aa7b118b"
+  "username": "daniel",
+  "email": "daniel@gmail.com"
 }
 ```
--PUT to update a thought by its _id: Modify a specific thought.
 
--DELETE to remove a thought by its _id: Delete a thought.
+In Insomnia:
+Select Body → JSON.
+Paste the JSON above.
+Click Send.
+
+
+📋 3. Get All Users (GET /api/users)
+
+# Method: GET
+
+URL: http://localhost:3001/api/users
+Click Send.
+Response: A list of all users in the database.
+
+👤 4. Get a Single User (GET /api/users/:userId)
+
+# Method: GET
+
+URL: http://localhost:3001/api/users/{userId} (replace {userId} with an actual ID)
+Click Send.
+
+✏ 5. Update a User (PUT /api/users/:userId)
+
+# Method: PUT
+URL: http://localhost:3001/api/users/{userId}
+Body (JSON):
 ```
-/api/thoughts/:thoughtId/reactions
+{
+  "username": "daniel_updated",
+  "email": "newemail@gmail.com"
+}
 ```
--POST to create a reaction in a thought's reactions array.
--DELETE to remove a reaction by its reactionId.
+Click Send.
 
-## Models
-## User
--username: String (unique, required, trimmed)
+❌ 6. Delete a User (DELETE /api/users/:userId)
+# Method: DELETE
 
--email: String (unique, required, valid email format)
+URL: http://localhost:3001/api/users/{userId}
+Click Send.
 
--thoughts: Array of ObjectIds referencing the Thought model
+🤝 7. Add a Friend (POST /api/users/:userId/friends/:friendId)
+# Method: POST
 
--friends: Array of ObjectIds referencing the User model (self-reference)
+URL: http://localhost:3001/api/users/{userId}/friends/{friendId}
+Click Send.
 
--Virtual Property: friendCount to get the number of friends
+💔 8. Remove a Friend (DELETE /api/users/:userId/friends/:friendId)
 
-## Thought
+# Method: DELETE
+URL: http://localhost:3001/api/users/{userId}/friends/{friendId}
+Click Send.
 
--thoughtText: String (required, 1–280 characters)
+🧠 9. Create a Thought (POST /api/thoughts)
 
--createdAt: Date (default to current timestamp, formatted)
+# Method: POST
 
--username: String (user who created the thought)
-
--reactions: Array of reactions (nested documents based on the Reaction schema)
-
--Virtual Property: reactionCount to get the number of reactions
-
-## Reaction (Subdocument in Thought)
-
--reactionId: ObjectId (default value is a new ObjectId)
-
--reactionBody: String (required, max 280 characters)
-
--username: String (required)
-
--createdAt: Date (default to current timestamp, formatted)
+URL: http://localhost:3001/api/thoughts
+Body (JSON):
+```
+{
+  "thoughtText": "This is my first thought!",
+  "username": "daniel",
+  "userId": "userId_here"
+}
+```
+Click Send.
 
 ## Walkthrough Video
 A walkthrough video demonstrating the functionality of this API and showing all the acceptance criteria can be found here : 
