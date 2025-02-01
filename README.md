@@ -118,7 +118,7 @@ Body (JSON):
 ```
 Click Send.
 
-## Walkthrough Video
+## View The Walkthrough Video Here
 [![Social Media API](https://img.youtube.com/vi/GAsObzz0pzo/0.jpg)](https://www.youtube.com/watch?v=GAsObzz0pzo)
 
 ## License
