@@ -7,7 +7,7 @@ This project is a Social Network API built using Express.js, MongoDB, and Mongoo
 ![PUT](screenshots/3.png)
 ![DELETE](screenshots/4.png)
 
-## Installation
+## Installation:
 
 -Clone the repository to your local machine:
 ```
