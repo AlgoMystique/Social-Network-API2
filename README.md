@@ -30,7 +30,7 @@ npm start
 ```
 The server will start, and the Mongoose models will be synced to the MongoDB database.
 
-## API Routes
+## API Routes:
 
 🚀 1. Add a New Request in Insomnia
 
