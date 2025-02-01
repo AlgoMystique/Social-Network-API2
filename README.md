@@ -2,6 +2,11 @@
 
 This project is a Social Network API built using Express.js, MongoDB, and Mongoose. It allows users to share thoughts, react to others' thoughts, and manage friend lists. The API offers various functionalities like creating, updating, deleting users and thoughts, adding and removing friends, and handling reactions to thoughts. This project was developed to practice working with NoSQL databases, API routing, and MongoDB.
 
+![POST](screenshots/1.png)
+![GET](screenshots/2.png)
+![PUT](screenshots/3.png)
+![DELETE](screenshots/4.png)
+
 ## Installation
 
 -Clone the repository to your local machine:
