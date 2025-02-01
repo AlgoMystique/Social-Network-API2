@@ -40,7 +40,7 @@ The server will start, and the Mongoose models will be synced to the MongoDB dat
 
 👤 2. Create a New User (POST /api/users)
 
-# Method: POST
+## Method: POST
 
 URL: http://localhost:3001/api/users
 Body (JSON):
@@ -59,7 +59,7 @@ Click Send.
 
 📋 3. Get All Users (GET /api/users)
 
-# Method: GET
+## Method: GET
 
 URL: http://localhost:3001/api/users
 Click Send.
@@ -67,14 +67,14 @@ Response: A list of all users in the database.
 
 👤 4. Get a Single User (GET /api/users/:userId)
 
-# Method: GET
+## Method: GET
 
 URL: http://localhost:3001/api/users/{userId} (replace {userId} with an actual ID)
 Click Send.
 
 ✏ 5. Update a User (PUT /api/users/:userId)
 
-# Method: PUT
+## Method: PUT
 URL: http://localhost:3001/api/users/{userId}
 Body (JSON):
 ```
@@ -86,26 +86,26 @@ Body (JSON):
 Click Send.
 
 ❌ 6. Delete a User (DELETE /api/users/:userId)
-# Method: DELETE
+## Method: DELETE
 
 URL: http://localhost:3001/api/users/{userId}
 Click Send.
 
 🤝 7. Add a Friend (POST /api/users/:userId/friends/:friendId)
-# Method: POST
+## Method: POST
 
 URL: http://localhost:3001/api/users/{userId}/friends/{friendId}
 Click Send.
 
 💔 8. Remove a Friend (DELETE /api/users/:userId/friends/:friendId)
 
-# Method: DELETE
+## Method: DELETE
 URL: http://localhost:3001/api/users/{userId}/friends/{friendId}
 Click Send.
 
 🧠 9. Create a Thought (POST /api/thoughts)
 
-# Method: POST
+## Method: POST
 
 URL: http://localhost:3001/api/thoughts
 Body (JSON):
