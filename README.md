@@ -119,7 +119,7 @@ Body (JSON):
 Click Send.
 
 ## Walkthrough Video
-A walkthrough video demonstrating the functionality of this API and showing all the acceptance criteria can be found here : 
+[![Social Media API](https://img.youtube.com/vi/GAsObzz0pzo/0.jpg)](https://www.youtube.com/watch?v=GAsObzz0pzo)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
